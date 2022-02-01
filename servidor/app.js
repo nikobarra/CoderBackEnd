@@ -9,9 +9,14 @@ const server = app.listen(8080, ()=> {
 })
 
 app.get('/', (request, response)=> {
-    response.send('<a href =/productos> Productos </a><a href =/producto> Producto </a>')
+    response.send('<a href =/productos> Productos </a><a href =/productoRandom> Prod Random </a>')
 })
 
 app.get ('/productos',(request,response)=>{
     prodContent.getAll().then(result => response.send(result))
+})
+
+app.get ('/productoRandom',(request,response)=>{
+    
+    prodContent.getById().then(result => response.send(result))
 })

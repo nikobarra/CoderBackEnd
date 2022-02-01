@@ -14,12 +14,19 @@ schema
 const pathToProduct ='./files/products.json'
 class Contenedor {
    
-    getById = async (id)=> {
-        if(!id) return {status:"error", error:"Id Needed to be provided"}
+    getById = async ()=> {
+
+        
+
+        /* if(!id) return {status:"error", error:"Id Needed to be provided"} */
         if(fs.existsSync(pathToProduct)){
             let data = await fs.promises.readFile(pathToProduct,'utf8')
             let products = JSON.parse(data);
+
+            let x = products.length //obtengo el largo del array
+            let id = Math.floor(Math.random()*(x+1)) //calculo el aleatorio
             let product = products.find(prod => prod.id==id)
+
             if (product) return {status:"success", payload:product}
             else return {status:"error", error:"Null - Product not found"}
         
