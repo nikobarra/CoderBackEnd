@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Turron",
+    "price": 5.5,
+    "thumbnail": "foto",
+    "id": 1
+  },
+  {
+    "title": "Alfajor Chocolate",
+    "price": 23,
+    "thumbnail": "foto",
+    "id": 2
+  },
+  {
+    "title": "Alfajor Glaseado",
+    "price": 22,
+    "thumbnail": "foto",
+    "id": 3
+  },
+  {
+    "title": "Alfajor Blanco",
+    "price": 21.8,
+    "thumbnail": "foto",
+    "id": 4
+  }
+]
