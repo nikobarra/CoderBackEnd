@@ -24,7 +24,7 @@ class Contenedor {
             let products = JSON.parse(data);
 
             let x = products.length //obtengo el largo del array
-            let id = Math.floor(Math.random()*(x+1)) //calculo el aleatorio
+            let id = Math.floor(Math.random()*(x)) //calculo el aleatorio
             let product = products.find(prod => prod.id==id)
 
             if (product) return {status:"success", payload:product}

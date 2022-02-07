@@ -1,7 +1,5 @@
 const { request, response } = require('express');
 const express = require ('express');
-const Contenedor = require('./Contenedor.js')
-const prodContent = new Contenedor();// nueva instancia del contenedor
 
 const app = express();
 const server = app.listen(8080, ()=> {
@@ -9,14 +7,9 @@ const server = app.listen(8080, ()=> {
 })
 
 app.get('/', (request, response)=> {
-    response.send('<a href =/productos> Productos </a><a href =/productoRandom> Prod Random </a>')
+    response.send('Hola')
 })
 
-app.get ('/productos',(request,response)=>{
-    prodContent.getAll().then(result => response.send(result))
-})
-
-app.get ('/productoRandom',(request,response)=>{
+app.get('/productos', (request, response)=>{
     
-    prodContent.getById().then(result => response.send(result))
 })
